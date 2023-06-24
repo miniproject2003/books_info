@@ -12,7 +12,8 @@ $date_of_purchase = $_POST['date_of_purchase'];
 
 $conn = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
 
-if ($conn->connect_error) {
+if ($conn->connect_error) 
+{
     die("Connection Failed: " . $conn->connect_error);
 }
 else
@@ -20,13 +21,14 @@ else
     echo "connection successful";
     $sql = "INSERT INTO books_info (name, author, price, quantity, date_of_purchase) VALUES ('$name', '$author', '$price', '$quantity', '$date_of_purchase')";
     $result = mysqli_query($conn, $sql);
-   
-    
 }
-if ($result) {
-    echo "Registration successful!";
-} else {
-    echo "Registration failed. Please again.";
+if ($result) 
+{
+    echo "<br>Registration successful!";
+} 
+else 
+{
+    echo "<br>Registration failed. Please again.";
 }
 $conn->close();
 ?>
