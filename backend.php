@@ -1,7 +1,7 @@
 <?php
 $dbhost = "localhost";
 $dbuser = "root";
-$dbpass = "root";
+$dbpass = "";
 $dbname = "books";
 
 $name = $_POST['name'];
