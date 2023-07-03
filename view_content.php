@@ -23,12 +23,18 @@
                         <th>Price</th>
                         <th>Quantity</th>
                         <th>Date Of Purchase
-                    </tr>
-                    <tr>';
+                    </tr>';
             while($result = mysqli_fetch_array($res))
             {
-                echo '<td>'.$resu
+                echo '<tr>';
+                echo '<td>'.$result['name'].'</td>';
+                echo '<td>'.$result['author'].'</td>';
+                echo '<td>'.$result['price'].'</td>';
+                echo '<td>'.$result['quantity'].'</td>';
+                echo '<td>'.$result['date_of_purchase'].'</td>';
+                echo '</tr>';
             }
+            echo '</table>';
         }   
         else
         {
