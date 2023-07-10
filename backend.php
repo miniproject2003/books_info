@@ -28,7 +28,7 @@ if ($result)
 } 
 else 
 {
-    echo "<br>Registration failed. Please again.";
+    echo "<br>Registration failed. Please try again.";
 }
 $conn->close();
 ?>
